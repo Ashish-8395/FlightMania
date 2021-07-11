@@ -14,9 +14,8 @@
             <div class="col col-3">destination</div>
             <div class="col col-4">fare</div>
             <div class="col col-5">Type</div>
-            <div class="col col-6" (click)="addFlight()">
-              <i class="fa fa-plus-square"></i>
-            </div>
+           
+           
           </li>
           <li class="table-row" *ngFor="let flight of flightRes">
             <div class="col col-1" data-label="name">{{flight.name}}</div>
@@ -24,12 +23,7 @@
             <div class="col col-3" data-label="destination">{{flight.destination}}</div>
             <div class="col col-4" data-label="fare">{{flight.fare}}</div>
             <div class="col col-5" data-label="type">{{flight.type}}</div>
-            <div class="col col-6" data-label="operation" (click)="deleteRow(flight)">
-              <i class="fa fa-trash"></i>
-            </div>
-            <div class="col col-7" data-label="operation" (click)="updateFlight(flight)">
-              <i class="fa fa-edit"></i>
-            </div>
+           
           </li>
         
         </ul>

@@ -11,7 +11,6 @@ const routes: Routes = [
     path: '',
     component: LandingPageComponent,
     pathMatch: 'full',
-    canActivate: [AuthGuard],
   },
   {
     path: 'login',

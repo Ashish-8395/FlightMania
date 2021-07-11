@@ -1,19 +1,19 @@
 <div class="div-login">
   <h4><b>Login here</b></h4>
-  <form [formGroup]="loginForm"  novalidate>
+  <form >
     <div class="example-container">
       <mat-form-field>
-        <input matInput placeholder="Email" formControlName="email">
+        <input matInput placeholder="Email" >
       </mat-form-field>
   <br>
       <mat-form-field>
-        <input matInput type="password" placeholder="Password" formControlName="password">    
+        <input matInput type="password" placeholder="Password" >    
       </mat-form-field>
   <br>
   <p>
     Forgot Password? Reset here
   </p>
-      <button [disabled]="!loginForm.valid" mat-raised-button color="primary"
+      <button mat-raised-button color="primary"
        mat-button (click)="login()"> Sign In</button>
     </div>
   </form>

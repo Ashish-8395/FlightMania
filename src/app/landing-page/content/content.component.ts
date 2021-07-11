@@ -11,11 +11,7 @@ export class ContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    var credential = JSON.parse(localStorage.getItem('credentials'));
-    console.log("KEY--------------------------------",
-    credential['roleid'] )
-    
-  this.isuser =  credential['roleid'] == 2 ;
+  
 
   }
 

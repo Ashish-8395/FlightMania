@@ -13,14 +13,8 @@ import { LoginService } from '../service/login.service';
 export class LoginComponent implements OnInit {
 
 
-  loginForm: FormGroup;
-  constructor(private router: Router,
-    private loginservice: LoginService) {
-    this.loginForm = new FormGroup({ 
-      email: new FormControl('', [Validators.required]), //Validators.email
-      password: new FormControl('', [Validators.required])
-    });
-  }
+  
+  constructor(private router: Router) {}
 
 
   
@@ -28,19 +22,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.loginservice.getauthToken(this.loginForm.get('email').value,
-    this.loginForm.get('password').value).subscribe(
-      res=>{
-        console.log("auth=",res)
-        localStorage.setItem('credentials',JSON.stringify(res))
-        this.router.navigate(['/']);
-      },
-      error => {
-        console.error(error)
-      }
-    )
    
+    this.router.navigate(['/']);
 
+     
 
   }
 }
